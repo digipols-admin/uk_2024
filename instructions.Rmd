@@ -50,5 +50,5 @@ You are expected to, in a sense, persuade the moderator of the validity of your 
 
 ### Important 
 
-You will be assigned a pseudonym, e.g. "c5", this ensures that when the first round of coding is completed and the results are displayed no one your codings and party estimates will be anonymised.
+You will be assigned a pseudonym, e.g. "c5", this ensures that when the first round of coding is completed and the results are displayed your codings and party estimates will be anonymised.
 
