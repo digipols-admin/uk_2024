@@ -4,6 +4,8 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Coding instructions"
+      href: instructions.html
+    - text: "Round 1 results"
+      href: results1.html
 output_dir: "docs"

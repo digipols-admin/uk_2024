@@ -1,0 +1,54 @@
+---
+title: "Instructions on the Coding Method"
+---
+
+### 1. The Aim of the Coding Exercise
+
+The goal of the coding exercise is to estimate the positions of parties contesting the UK general elections across a number of political issues (questions) in order to use them in the design of a Voting Advice Application (VAA). To do so, a coding method, best described as an "iterative expert survey", has been selected.
+
+### 2. Instructions on the "Position" Coding
+
+"**Party position on the item**" asks you to provide a coding that refers to how the party would have answered the policy item. You will be providing this coding on a 5-point Likert-type scale that ranges from "Completely Disagree" to "Completely Agree", including a "No opinion" option. You will be provided with the various options by clicking anywhere on the Dropdown box ("Select an option").
+
+#### General Information on Using the Likert-type Scales
+
+##### i) When to Use "Agree" or "Disagree"
+
+Positions "Agree" and "Disagree" should be used if a party takes sides on the issue. For example, in the statement "Greece should leave the Eurozone", "Agree" should be used if the party agrees with the statement, albeit not with particular fervour; respectively, "Disagree" should be used if the party believes Greece should remain in the Eurozone.
+
+##### ii) When to Use "Completely Agree" or "Completely Disagree"
+
+Positions "Completely Agree" and "Completely Disagree" should be used if a party strongly emphasises the issue and does not place any restrictions, doubts, etc. on the issue.
+
+##### iii) When to Use "Neither Agree nor Disagree"
+
+Position "Neither agree, nor disagree" is to be used if a party only addresses an issue indirectly, or vaguely, and does not express a clear opinion in favour or against, or if a party is divided on an issue.
+
+##### iv) When to Use "No Opinion"
+
+You should only use "No Opinion" if the party's position on the issue is not mentioned in, and cannot be inferred from, any relevant sources. 
+
+### 3. Instructions on Coding "Confidence" in the Assigned Code
+
+#### Confidence Levels
+
+i) Use "Very confident" when you can find direct evidence for the party's position, such as policy descriptions in party manifestos or official communiques.
+
+ii) Use "Somewhat Confident" if you cannot find direct evidence but can reasonably infer the party's position from other policies or statements.
+
+iii) Use "Not at all confident" if no direct confirmatory evidence is available but the party’s position can be inferred from its overall political ideology or principles.
+
+### 4. Instructions on the "Source" Column
+
+You are expected to provide detailed information concerning the document or source on the basis of which you estimated the party's position. 
+
+**Important** It may be the case that you have multiple sources. For instance a fictitious URL like this, www.source1.com. If you have multiple sources use a delimiter like this semi colon ";". To cite 3 fictitious sources you could do this: www.source1.com; www.source2.com; www.source3.com
+
+### 5. Instructions on the "Justification" Column
+
+You are expected to, in a sense, persuade the moderator of the validity of your coding. The information you provide here will also be available to other Coders for Round 2 and may be very helpful in resolving any disagreement.
+
+### Important 
+
+You will be assigned a pseudonym, e.g. "c5", this ensures that when the first round of coding is completed and the results are displayed no one your codings and party estimates will be anonymised.
+
