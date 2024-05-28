@@ -1,7 +1,16 @@
 ---
-title: "My Website"
+title: "UK: General elections 2024"
 ---
 
-Hello, Website!
+This website contains information related to the UK general elections 2024. Its main focus is on the party coding process.
 
-Add content here!!!!
+You should have received an Excel file for coding the parties. Please make sure you only fill in the appropriate values on the Excel. Do not make any other changes to the Excel file. 
+
+**Very important: The data from the Excel file will be programmatically extracted, it is important that you do not make changes to the structure of the Excel file, for instance do not merge cells in the Excel file or change the list of dropdown answer categories.$$
+
+How to use this web resource:
+
+*Phase 1: Party coding*: View the  [coding instructions](https://digipols-admin.github.io/uk_2024/instructions.html){target="_blank"} before starting the party coding process.
+
+*Phase 2: Results of the first round of party coding*: The [coding results](https://digipols-admin.github.io/uk_2024/results1.html){target="_blank"} of the first round will only be enabled in phase 2, i.e. when the first round results are delivered. It will contains the aggreagted codes for all the parties that have been coded. The data is anonymised, so other coders can only see anonymised estimates of party positions. Your anonymsed party estimates, sources, justifications and comments will be viewable by others.
+
