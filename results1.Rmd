@@ -7,3 +7,85 @@ editor_options:
 This web section will contain the results from the first round of coding. The results will be displayed when coders have finished with the first round.
 
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r,message=FALSE,warning=FALSE}
+library(here)
+#library(janitor)
+library(tidyverse)
+library(rstatix)
+library(kableExtra)
+library(ggplot2)
+library(ggpubr)
+library(DT)
+library(reactable)
+library(htmltools)
+
+```
+
+> THIS IS TEST DATA. PLEASE IGNORE
+
+## Lib-Dems
+
+```{r}
+# Load the data frame (assuming df is loaded and has the described structure)
+
+# Load drafts
+load(here("data/libdems/df.rda"))
+df <- df %>% rename(id=id1)
+reactable(df, columns = list(
+  id = colDef(name = "ID", minWidth = 250),
+  coder = colDef(name = "Coder", details = function(index) {
+    # Extract the sub-data for the expanded row
+    sub_data <- df[index, c("Source", "Justification", "Comment")]
+    # Create a mini reactable for nested display
+    div(style = "padding: 16px; margin-top: -10px; margin-bottom: -10px;",
+        reactable(sub_data, bordered = TRUE, compact = TRUE))
+  }),
+  Source = colDef(show = FALSE),
+  Justification = colDef(show = FALSE),
+  Comment = colDef(show = FALSE)
+), defaultColDef = colDef(minWidth = 150, cell = function(value) {
+  # Style for other columns
+  span(style = "display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;", value)
+}), groupBy = "id", pagination = FALSE)
+
+```
+
+
+<br>
+
+## Greens
+
+```{r}
+# Load the data frame (assuming df is loaded and has the described structure)
+
+# Load drafts
+load(here("data/greens/df.rda"))
+df <- df %>% rename(id=id1)
+reactable(df, columns = list(
+  id = colDef(name = "ID", minWidth = 250),
+  coder = colDef(name = "Coder", details = function(index) {
+    # Extract the sub-data for the expanded row
+    sub_data <- df[index, c("Source", "Justification", "Comment")]
+    # Create a mini reactable for nested display
+    div(style = "padding: 16px; margin-top: -10px; margin-bottom: -10px;",
+        reactable(sub_data, bordered = TRUE, compact = TRUE))
+  }),
+  Source = colDef(show = FALSE),
+  Justification = colDef(show = FALSE),
+  Comment = colDef(show = FALSE)
+), defaultColDef = colDef(minWidth = 150, cell = function(value) {
+  # Style for other columns
+  span(style = "display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;", value)
+}), groupBy = "id", pagination = FALSE)
+
+```
+
+
+<br>
+
+
+
