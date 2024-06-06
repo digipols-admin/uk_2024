@@ -12,7 +12,7 @@ library(readxl)
 library(here)
 
 # Get the list of folder ids and names
-folder_info <- drive_ls(as_id("1mnOZMyzwwE4QnhBl7I6Mlcn0PM2rTjdh")) %>% 
+folder_info <- drive_ls(as_id("10nJRzwtVUjHoldEj7jBhjh1zCkmMW3bK")) %>% 
   select(name, id)
 
 # Function to process files in each folder

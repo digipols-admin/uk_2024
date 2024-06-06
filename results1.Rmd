@@ -4,8 +4,9 @@ editor_options:
   chunk_output_type: console
 ---
 
-This web section will contain the results from the first round of coding. The results will be displayed when coders have finished with the first round.
+This web section contains the results from the first round of coding.
 
+Each party is listed below. You can drill into each code by starting with the ID column and clicking on a policy item. This will reveal the coders’ estimates of the party’s position. By clicking on the Coder column, you will get more detailed information from the individual coder.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -25,15 +26,16 @@ library(htmltools)
 
 ```
 
-> THIS IS TEST DATA. PLEASE IGNORE
 
-## Lib-Dems
+## Alba
+<details>
+  <summary>Click to open data table</summary>
 
 ```{r}
 # Load the data frame (assuming df is loaded and has the described structure)
 
 # Load drafts
-load(here("data/libdems/df.rda"))
+load(here("data/alba/df.rda"))
 df <- df %>% rename(id=id1)
 reactable(df, columns = list(
   id = colDef(name = "ID", minWidth = 250),
@@ -53,11 +55,45 @@ reactable(df, columns = list(
 }), groupBy = "id", pagination = FALSE)
 
 ```
+</details> 
+<br>  
 
 
+
+## Conservatives
+<details>
+  <summary>Click to open data table</summary>
+
+```{r}
+# Load the data frame (assuming df is loaded and has the described structure)
+
+# Load drafts
+load(here("data/conservatives/df.rda"))
+df <- df %>% rename(id=id1)
+reactable(df, columns = list(
+  id = colDef(name = "ID", minWidth = 250),
+  coder = colDef(name = "Coder", details = function(index) {
+    # Extract the sub-data for the expanded row
+    sub_data <- df[index, c("Source", "Justification", "Comment")]
+    # Create a mini reactable for nested display
+    div(style = "padding: 16px; margin-top: -10px; margin-bottom: -10px;",
+        reactable(sub_data, bordered = TRUE, compact = TRUE))
+  }),
+  Source = colDef(show = FALSE),
+  Justification = colDef(show = FALSE),
+  Comment = colDef(show = FALSE)
+), defaultColDef = colDef(minWidth = 150, cell = function(value) {
+  # Style for other columns
+  span(style = "display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;", value)
+}), groupBy = "id", pagination = FALSE)
+
+```
+</details>
 <br>
 
 ## Greens
+<details>
+  <summary>Click to open data table</summary>
 
 ```{r}
 # Load the data frame (assuming df is loaded and has the described structure)
@@ -83,9 +119,193 @@ reactable(df, columns = list(
 }), groupBy = "id", pagination = FALSE)
 
 ```
+</details>
+<br>
 
+## Labour
+<details>
+  <summary>Click to open data table</summary>
 
+```{r}
+# Load the data frame (assuming df is loaded and has the described structure)
+
+# Load drafts
+load(here("data/labour/df.rda"))
+df <- df %>% rename(id=id1)
+reactable(df, columns = list(
+  id = colDef(name = "ID", minWidth = 250),
+  coder = colDef(name = "Coder", details = function(index) {
+    # Extract the sub-data for the expanded row
+    sub_data <- df[index, c("Source", "Justification", "Comment")]
+    # Create a mini reactable for nested display
+    div(style = "padding: 16px; margin-top: -10px; margin-bottom: -10px;",
+        reactable(sub_data, bordered = TRUE, compact = TRUE))
+  }),
+  Source = colDef(show = FALSE),
+  Justification = colDef(show = FALSE),
+  Comment = colDef(show = FALSE)
+), defaultColDef = colDef(minWidth = 150, cell = function(value) {
+  # Style for other columns
+  span(style = "display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;", value)
+}), groupBy = "id", pagination = FALSE)
+
+```
+</details>
+<br>
+
+## Liberal Democrats
+<details>
+  <summary>Click to open data table</summary>
+
+```{r}
+# Load the data frame (assuming df is loaded and has the described structure)
+
+# Load drafts
+load(here("data/libdems/df.rda"))
+df <- df %>% rename(id=id1)
+reactable(df, columns = list(
+  id = colDef(name = "ID", minWidth = 250),
+  coder = colDef(name = "Coder", details = function(index) {
+    # Extract the sub-data for the expanded row
+    sub_data <- df[index, c("Source", "Justification", "Comment")]
+    # Create a mini reactable for nested display
+    div(style = "padding: 16px; margin-top: -10px; margin-bottom: -10px;",
+        reactable(sub_data, bordered = TRUE, compact = TRUE))
+  }),
+  Source = colDef(show = FALSE),
+  Justification = colDef(show = FALSE),
+  Comment = colDef(show = FALSE)
+), defaultColDef = colDef(minWidth = 150, cell = function(value) {
+  # Style for other columns
+  span(style = "display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;", value)
+}), groupBy = "id", pagination = FALSE)
+
+```
+</details>
+<br>
+
+## Plaid Cymru
+<details>
+  <summary>Click to open data table</summary>
+
+```{r}
+# Load the data frame (assuming df is loaded and has the described structure)
+
+# Load drafts
+load(here("data/plaid/df.rda"))
+df <- df %>% rename(id=id1)
+reactable(df, columns = list(
+  id = colDef(name = "ID", minWidth = 250),
+  coder = colDef(name = "Coder", details = function(index) {
+    # Extract the sub-data for the expanded row
+    sub_data <- df[index, c("Source", "Justification", "Comment")]
+    # Create a mini reactable for nested display
+    div(style = "padding: 16px; margin-top: -10px; margin-bottom: -10px;",
+        reactable(sub_data, bordered = TRUE, compact = TRUE))
+  }),
+  Source = colDef(show = FALSE),
+  Justification = colDef(show = FALSE),
+  Comment = colDef(show = FALSE)
+), defaultColDef = colDef(minWidth = 150, cell = function(value) {
+  # Style for other columns
+  span(style = "display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;", value)
+}), groupBy = "id", pagination = FALSE)
+
+```
+</details>
+<br>
+
+## Reform
+<details>
+  <summary>Click to open data table</summary>
+
+```{r}
+# Load the data frame (assuming df is loaded and has the described structure)
+
+# Load drafts
+load(here("data/reform/df.rda"))
+df <- df %>% rename(id=id1)
+reactable(df, columns = list(
+  id = colDef(name = "ID", minWidth = 250),
+  coder = colDef(name = "Coder", details = function(index) {
+    # Extract the sub-data for the expanded row
+    sub_data <- df[index, c("Source", "Justification", "Comment")]
+    # Create a mini reactable for nested display
+    div(style = "padding: 16px; margin-top: -10px; margin-bottom: -10px;",
+        reactable(sub_data, bordered = TRUE, compact = TRUE))
+  }),
+  Source = colDef(show = FALSE),
+  Justification = colDef(show = FALSE),
+  Comment = colDef(show = FALSE)
+), defaultColDef = colDef(minWidth = 150, cell = function(value) {
+  # Style for other columns
+  span(style = "display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;", value)
+}), groupBy = "id", pagination = FALSE)
+
+```
+</details>
+<br>
+
+## Scottish Greens
+<details>
+  <summary>Click to open data table</summary>
+
+```{r}
+# Load the data frame (assuming df is loaded and has the described structure)
+
+# Load drafts
+load(here("data/scotgreens/df.rda"))
+df <- df %>% rename(id=id1)
+reactable(df, columns = list(
+  id = colDef(name = "ID", minWidth = 250),
+  coder = colDef(name = "Coder", details = function(index) {
+    # Extract the sub-data for the expanded row
+    sub_data <- df[index, c("Source", "Justification", "Comment")]
+    # Create a mini reactable for nested display
+    div(style = "padding: 16px; margin-top: -10px; margin-bottom: -10px;",
+        reactable(sub_data, bordered = TRUE, compact = TRUE))
+  }),
+  Source = colDef(show = FALSE),
+  Justification = colDef(show = FALSE),
+  Comment = colDef(show = FALSE)
+), defaultColDef = colDef(minWidth = 150, cell = function(value) {
+  # Style for other columns
+  span(style = "display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;", value)
+}), groupBy = "id", pagination = FALSE)
+
+```
+</details>
 <br>
 
 
+## SNP
+<details>
+  <summary>Click to open data table</summary>
+
+```{r}
+# Load the data frame (assuming df is loaded and has the described structure)
+
+# Load drafts
+load(here("data/snp/df.rda"))
+df <- df %>% rename(id=id1)
+reactable(df, columns = list(
+  id = colDef(name = "ID", minWidth = 250),
+  coder = colDef(name = "Coder", details = function(index) {
+    # Extract the sub-data for the expanded row
+    sub_data <- df[index, c("Source", "Justification", "Comment")]
+    # Create a mini reactable for nested display
+    div(style = "padding: 16px; margin-top: -10px; margin-bottom: -10px;",
+        reactable(sub_data, bordered = TRUE, compact = TRUE))
+  }),
+  Source = colDef(show = FALSE),
+  Justification = colDef(show = FALSE),
+  Comment = colDef(show = FALSE)
+), defaultColDef = colDef(minWidth = 150, cell = function(value) {
+  # Style for other columns
+  span(style = "display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;", value)
+}), groupBy = "id", pagination = FALSE)
+
+```
+</details>
+<br>
 
